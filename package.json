@@ -1,7 +1,7 @@
 {
   "name": "@reedchan/koa-proxy",
   "description": "Http Proxy Middleware for Koa",
-  "version": "0.13.0",
+  "version": "0.13.1",
   "keywords": [
     "koa",
     "middleware",

@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.13.1](https://github.com/reedchan7/koa-proxy/compare/v0.12.4...v0.13.1) (2025-05-22)
 
+
+### Features
+
+* v0.13.0: timeout and proxyTimeout support ([df6ba90](https://github.com/reedchan7/koa-proxy/commit/df6ba90c1da9bbeb4aad888f912db137e6ac63ca))
+
+### [0.13.1](https://github.com/reedchan7/koa-proxy/compare/v0.12.4...v0.13.1) (2025-05-22)
+
 ### [0.12.4](https://github.com/vagusX/koa-proxies/compare/v0.12.3...v0.12.4) (2023-11-04)
 
 
