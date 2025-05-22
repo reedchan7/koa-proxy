@@ -5,7 +5,12 @@ Koa Proxy is a middleware to proxy request to another.
 ## Installation
 
 ```bash
-$ npm install koa-proxy --save
+# npm
+$ npm install @reedchan/koa-proxy
+# yarn
+$ yarn add @reedchan/koa-proxy
+# pnpm
+$ pnpm install @reedchan/koa-proxy
 ```
 
 ## Options
@@ -36,7 +41,7 @@ options.logs = (ctx, target) {
 ```js
 // dependencies
 const Koa = require('koa')
-const proxy = require('koa-proxies')
+const proxy = require('@reedchan/koa-proxy')
 const httpsProxyAgent = require('https-proxy-agent')
 
 const app = new Koa()
@@ -46,6 +51,8 @@ app.use(proxy('/octocat', {
   target: 'https://api.github.com/users/',
   changeOrigin: true,
   agent: new httpsProxyAgent('http://1.2.3.4:88'), // if you need or just delete this line
+  timeout: 5000,
+  proxyTimeout: 10000,
   rewrite: path => path.replace(/^\/octocat(\/|\/\w+)?$/, '/vagusx'),
   logs: true
 }))
@@ -55,7 +62,7 @@ The 2nd parameter `options` can be a function. It will be called with the path m
 ```js
 // dependencies
 const Koa = require('koa')
-const proxy = require('koa-proxies')
+const proxy = require('@reedchan/koa-proxy')
 
 const app = new Koa()
 
@@ -74,12 +81,12 @@ Moreover, if the `options` function return `false`, then the proxy will be bypas
 
 ### Attention
 
-Please make sure that `koa-proxies` is in front of `koa-bodyparser` to avoid this [issue 55](https://github.com/vagusX/koa-proxies/issues/55)
+Please make sure that `@reedchan/koa-proxy` is in front of `koa-bodyparser` to avoid this [issue 55](https://github.com/vagusX/@reedchan/koa-proxy/issues/55)
 
 ```js
 const Koa = require('koa')
 const app = new Koa()
-const proxy = require('koa-proxies')
+const proxy = require('@reedchan/koa-proxy')
 const bodyParser = require('koa-bodyparser')
 
 app.use(proxy('/user', {
@@ -89,5 +96,3 @@ app.use(proxy('/user', {
 
 app.use(bodyParser())
 ```
-
-[![JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
