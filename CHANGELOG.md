@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.13.1](https://github.com/reedchan7/koa-proxy/compare/v0.12.4...v0.13.1) (2025-05-22)
+
 ### [0.12.4](https://github.com/vagusX/koa-proxies/compare/v0.12.3...v0.12.4) (2023-11-04)
 
 

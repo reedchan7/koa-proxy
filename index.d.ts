@@ -11,6 +11,8 @@ declare namespace KoaProxies {
     agent?: any;
     headers?: {[key: string]: string};
     rewrite?: (path: string) => string;
+    timeout?: number;
+    proxyTimeout?: number;
     events?: {
       error?: (error: any, req: IncomingMessage, res: ServerResponse) => void;
       proxyReq?: (proxyReq: ClientRequest, req: IncomingMessage, res: ServerResponse) => void;

@@ -64,7 +64,7 @@ module.exports = (path, options) => {
       opts = Object.assign({}, options)
     }
 
-    const { logs, rewrite, events, ...httpProxyOpts } = opts
+    const { logs, rewrite, events, timeout, proxyTimeout, ...httpProxyOpts } = opts
 
     return new Promise((resolve, reject) => {
       ctx.req.oldPath = ctx.req.url
@@ -103,7 +103,7 @@ module.exports = (path, options) => {
         resolve()
       })
 
-      proxy.web(ctx.req, ctx.res, httpProxyOpts, (e, ...args) => {
+      proxy.web(ctx.req, ctx.res, { ...httpProxyOpts, timeout, proxyTimeout }, (e, ...args) => {
         const errorHandler = proxyEventHandlers.error && proxyEventHandlers.error.get(ctx.req[REQUEST_IDENTIFIER])
 
         if (typeof errorHandler === 'function') {

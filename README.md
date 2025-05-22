@@ -1,20 +1,11 @@
-# Koa Proxies
+# Koa Proxy
 
-![NPM](https://img.shields.io/npm/v/koa-proxies.svg)
-
-[![Node.js CI](https://github.com/vagusX/koa-proxies/actions/workflows/node.js.yml/badge.svg)](https://github.com/vagusX/koa-proxies/actions/workflows/node.js.yml)
-[![Coverage](https://img.shields.io/codecov/c/github/vagusX/koa-proxies.svg)](https://codecov.io/gh/vagusX/koa-proxies)
-[![NPM Downloads](https://img.shields.io/npm/dm/koa-proxies.svg)](https://www.npmjs.com/package/koa-proxies)
-[![Greenkeeper badge](https://badges.greenkeeper.io/vagusX/koa-proxies.svg)](https://greenkeeper.io/)
-
-> [Koa@2.x/next](https://github.com/koajs/koa) middlware for http proxy
-
-Powered by [`http-proxy`](https://github.com/nodejitsu/node-http-proxy).
+Koa Proxy is a middleware to proxy request to another.
 
 ## Installation
 
 ```bash
-$ npm install koa-proxies --save
+$ npm install koa-proxy --save
 ```
 
 ## Options
